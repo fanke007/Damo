@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	div ,p{margin:0;padding:0}
+	.wrap{
+		position:relative;
+		top:280px;
+		left:500px;
+		width:280px;
+		height:350px;
+		transform-origin:bottom;
+		animation:ma 2s ease-in ;
+}
+	@keyframes ma {
+		0%,10%{transform:rotate(20deg)}
+		 10%,30%{transform:rotate(-20deg)}
+		 30%,50%{transform:rotate(15deg)}
+		 50%,70%{transform:rotate(-15deg)}
+		70%,80%{transform:rotate(10deg)}
+		80%,90%{transform:rotate(-10deg)}
+		90%,100%{transform:rotate(0deg)}
+}
+
+
+
+	
+	.top{/* 上壳 */
+		position:absolute;
+		top:30px;
+		left:30px;
+		z-index:99;
+		width:200px;
+		height:200px;
+		background-color:#b0a731;
+		margin:0 auto;
+		border-radius: 50%/100% 100% 0  0 ;
+		transform-origin:right bottom;
+		animation:may 1s linear 1 2s forwards;
+}
+	@keyframes may {
+		100%{transform:rotate(145deg)}
+
+}
+		
+		/* 小鸡左 */
+	.main{
+	position:absolute;
+	top:150px;
+	left:50px;
+	
+	margin:0 auto;
+	width:100px;
+	height:180px;
+	background-color:yellow;
+	border-radius:60%;
+	box-shadow: 0px 0px 1px 0px #000,
+			 65px 0px 0px 2px #f46a89;/* 小鸡右侧 */
+	transform-origin:bottom;
+	animation:man 1s ease-in 3s
+}
+		@keyframes man {
+		10%{transform:translateY(-15px)}
+		30%{transform:translateY(0px)}
+		50%{transform:translateY(-15px)}
+		70%{transform:translateY(0px)}
+		90%{transform:translateY(-15px)}
+		100%{transform:translateY(0px)}
+}
+	/* 左小鸡眼 */
+	.main:after{
+		content:"";
+		display:block;
+		margin-left:44px;
+		width:0;
+		height:0;
+		border:6px solid transparent;
+		border-bottom:none;
+		border-top-color:red;
+		border-radius:50%;
+		box-shadow:-21px -21px 0px 0px #000,	
+					21px -21px 0px 0px #000;
+		animation:eye 4s linear 4s infinite;
+	
+}
+		@keyframes eye {
+			0%{box-shadow:-21px -21px 0px 0px #000,21px -21px 0px 0px #000;}
+			10%{box-shadow:-21px -21px 0px -2px #000,21px -21px 0px -2px #000;}
+			25%{box-shadow:-21px -21px 0px 0px #000,21px -21px 0px 0px #000;}
+			55%{box-shadow:-21px -21px 0px -2px #000,21px -21px 0px -2px #000;}
+			65%{box-shadow:-21px -21px 0px 0px #000,21px -21px 0px 0px #000;}
+			80%{box-shadow:-21px -21px 0px -2px #000,21px -21px 0px -2px #000;}
+			90%{box-shadow:-21px -21px 0px 0px #000,21px -21px 0px 0px #000;}
+			100%{box-shadow:-21px -21px 0px 0px #000,21px -21px 0px 0px #000;}
+}
+
+	/* 右小鸡眼 */
+	.main:before{
+		content:"";
+		display:block;
+		margin-top:44px;
+		margin-left:110px;
+		width:0;
+		height:0;
+		border:6px solid transparent;
+		border-bottom:none;
+		border-top-color:red;
+		border-radius:31%;
+		box-shadow:-19px -21px 0px 0px #000,	
+					20px -21px 0px 0px #000;
+	
+		animation:eye2 4s linear 5s infinite;
+	
+}
+		@keyframes eye2 {
+			0%{box-shadow:-19px -21px 0px 0px #000,20px -21px 0px 0px #000;}
+			10%{box-shadow:-19px -21px 0px -2px #000,20px -21px 0px -2px #000;}
+			25%{box-shadow:-19px -21px 0px 0px #000,20px -21px 0px 0px #000;}
+			45%{box-shadow:-19px -21px 0px -2px #000,20px -21px 0px -2px #000;}
+			60%{box-shadow:-19px -21px 0px 0px #000,20px -21px 0px 0px #000;}
+			75%{box-shadow:-19px -21px 0px -2px #000,20px -21px 0px -2px #000;}
+			90%{box-shadow:-19px -21px 0px 0px #000,20px -21px 0px 0px #000;}
+			100%{box-shadow:-19px -21px 0px 0px #000,20px -21px 0px 0px #000;}
+}
+	/* 小鸡下壳 */
+	.bottom{
+		position:absolute;
+		top:250px;
+		left:30px;
+		z-index:99;
+		width:200px;
+		height:100px;
+		background-color:#b0a731;
+		margin:0 auto;
+		border-radius: 0 0 200px 200px;
+}
+	/* 小鸡下齿 */
+	.bottom:before{
+		content:"";
+		display:block;
+		width:0;
+		height:0;
+		margin-top:-15px;
+		margin-left:173px;
+		transform:rotate(134deg);
+		border:20px solid transparent;
+		border-top:none;
+		border-bottom-color:#b0a731;
+		
+}
+		
+	
+/*上 壳齿 */
+			
+.ket{
+	position:absolute;
+	top:186px;
+	left:13px;
+	z-index:99;
+	width:0px;
+	height:0px;
+	border:27px solid transparent;
+	border-right:none;
+	border-left-color:#b0a731;
+	transform:rotate(90deg);
+}
+/* 上壳齿 */
+	
+.ket:before{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	margin-top:-77px;
+	margin-left:-27px;	
+	border:27px solid transparent;
+	border-right:none;
+	border-left-color:#b0a731;
+
+}
+
+/*上 壳齿 */
+	
+.ket:after{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	margin-top:-98px;
+	margin-left:-27px;
+	
+	border:27px solid transparent;
+	border-right:none;
+	border-left-color:#b0a731;
+
+}
+/* 上壳齿 */
+.top:after{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	margin-top:199px;
+	margin-left:147px;
+	border:27px solid transparent;
+	border-bottom:none;
+	border-top-color:#b0a731;
+
+}
+/* 下壳齿 */	
+.keb{
+		width:0;
+		height:0;
+		margin-top:-29px;
+		margin-left:125px;
+		border:24px solid transparent;
+		border-top:none;
+		border-bottom-color:#b0a731;
+}
+/* 下壳齿 */	
+.keb2{
+		width:0;
+		height:0;
+		margin-top:-23px;
+		margin-left:77px;
+		border:23px solid transparent;
+		border-top:none;
+		border-bottom-color:#b0a731;
+}
+/* 下壳齿 */	
+
+.keb:after{
+		content:"";
+		display:block;
+		width:0;
+		height:0;
+		margin-top:-15px;
+		margin-left:-161px;
+		transform:rotate(-135deg);
+		border:19px solid transparent;
+		border-top:none;
+		border-bottom-color:#b0a731;
+}
+
+/* 下壳齿 */			
+.keb:before{
+		content:"";
+		display:block;
+		width:0;
+		height:0;
+		margin-top:-29px;
+		margin-left:-121px;
+		border:24px solid transparent;
+		border-top:none;
+		border-bottom-color:#b0a731;
+}
+		
+.wrap p{
+	position:absolute;
+	height:20px;
+	border:2px solid #060;
+	outline:3px solid #f03;
+}
+.wrap p span{
+	font-weight:bold;
+	font-size:18px;
+	color:#bd005f;
+}
+.text{
+	top:115px;
+	left:10px;
+	opacity:0;
+	animation:tet 3s linear 5s
+}
+@keyframes tet{
+50%{opacity:1}
+100%{opacity:1}
+
+}
+.text:after{
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	margin-top:-10px;
+	margin-left:105px;
+	border:10px solid transparent;
+	border-top:none;
+	border-right-width:50px;
+	transform:rotate(46deg);
+	border-bottom-color:red;
+}
+span:after{
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	margin-top:16px;
+	margin-left:20px;
+	border:10px solid transparent;
+	border-top:none;
+	border-right-width:50px;
+	transform:rotate(46deg);
+	border-bottom-color:red;
+}
+
+		
+.text1{
+	top:110px;
+	left:-40px;
+	opacity:0;
+	animation:tet1 3s linear 8s 
+}
+@keyframes tet1{
+50%{opacity:1}
+100%{opacity:1}
+
+}
+.text1:after{
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	margin-top:16px;
+	margin-left:59px;
+	border:10px solid transparent;
+	border-top:none;
+	border-right-width:50px;
+	transform:rotate(46deg);
+	border-bottom-color:red;
+}
+
+
+.text2{
+	top:87px;
+	right:20px;
+	opacity:0;
+	animation:tet2 3s linear 12s 
+}
+@keyframes tet2{
+50%{opacity:1}
+100%{opacity:1}
+
+}
+
+.text2:after{
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	margin-top:16px;
+	margin-left:8px;
+	border:10px solid transparent;
+	border-top:none;
+	border-left-width:50px;
+	transform:rotate(-42deg);
+	border-bottom-color:red;
+}
+
+
+  </style>
+ </head>
+ <body>
+	<div class="wrap">
+		<div class="top">
+			<div class="ket"></div>
+		</div>
+		<div class="main"></div>
+		<div class="bottom">
+			<div class="keb"></div>
+			<div class="keb2"></div>
+		</div>
+		<p class="text">
+			
+			大家好!!我们是小鸡<span>Flash!!</span>
+		</p>
+		<p class="text1">预祝大家新春快乐!!</p>
+		<p class="text2">万事如意!!</p>
+	</div>
+ </body>
+</html>
+
